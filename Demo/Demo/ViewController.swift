@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "ji";
-
-        self.view.backgroundColor = UIColor.white
+       
+        self.title = "kjkkk"
+        
         
     }
     

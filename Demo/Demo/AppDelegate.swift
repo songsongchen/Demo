@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let controller = UINavigationController.init(rootViewController: ViewController())
+        let controller = TabBarViewController()
         
         self.window = UIWindow.init(frame:UIScreen.main.bounds)
         self.window?.rootViewController = controller
