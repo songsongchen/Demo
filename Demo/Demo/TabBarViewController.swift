@@ -8,12 +8,12 @@
 
 import UIKit
 
-class TabBarViewController: BaseViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChildViewController()
-
+        self.view.backgroundColor = UIColor.purple
         //        self.setValue(MainTabBar(), forKey: "tabBar")
     }
 
@@ -32,11 +32,16 @@ class TabBarViewController: BaseViewController {
     }
     func tabBaraAddChildViewController(vc: UIViewController, title: String, image: String, selectedImage: String) {
         
-        vc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: image), selectedImage: UIImage(named: selectedImage))
-        vc.view.backgroundColor = UIColor.purple
-        let nav = RootNavigationViewController(rootViewController: vc)
+//        vc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: image), selectedImage: UIImage(named: selectedImage))
+//        let nav = RootNavigationViewController(rootViewController: vc)
 //        addChildViewController(nav)
-        tabBarController?.viewControllers?.append(nav)
+//        tabBarController?.viewControllers?.append(nav)
+        
+        vc.tabBarItem.image = UIImage(named: image)
+        vc.tabBarItem.selectedImage = UIImage(named: selectedImage)
+        vc.title = title
+        addChildViewController(RootNavigationViewController(rootViewController: vc))
+
     }
 
 }

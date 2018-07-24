@@ -13,6 +13,11 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
+        if (self.navigationController?.viewControllers.count)! > 1 {
+            let item = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(self.back));
+            self.navigationItem.setLeftBarButton(item, animated: true)
+        }
+      
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +25,9 @@ class HomeViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @objc func back() {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

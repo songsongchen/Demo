@@ -15,7 +15,7 @@ class RootNavigationViewController: UINavigationController {
         super.viewDidLoad()
         
         self.interactivePopGestureRecognizer!.delegate = nil;
-
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,13 +26,13 @@ class RootNavigationViewController: UINavigationController {
 
     lazy var backBtn: UIButton = {
         //设置返回按钮属性
-        let backBtn = UIButton(type: UIButtonType.custom)
+        let backBtn = UIButton(type: .custom)
         backBtn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
-        backBtn.setTitleColor(UIColor.black, for: UIControlState.normal)
-        backBtn.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
-        backBtn.setImage(UIImage(named: "back_1"), for: UIControlState.normal)
-        backBtn.setImage(UIImage(named: "back_2"), for: UIControlState.highlighted)
-        backBtn.addTarget(self, action:Selector(("backBtnClick")), for:UIControlEvents.touchUpInside)
+        backBtn.setTitleColor(UIColor.black, for: .normal)
+        backBtn.setTitleColor(UIColor.gray, for: .highlighted)
+        backBtn.setImage(UIImage(named: "back_1"), for: .normal)
+        backBtn.setImage(UIImage(named: "back_2"), for: .highlighted)
+        backBtn.addTarget(self, action:#selector(backBtnClick), for:.touchUpInside)
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
         backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0)
         backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)
@@ -62,7 +62,7 @@ class RootNavigationViewController: UINavigationController {
         super.pushViewController(viewController, animated: animated)
     }
     
-    func backBtnClick() {
+    @objc func backBtnClick() {
         self.popViewController(animated: true)
     }
 
