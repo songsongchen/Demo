@@ -13,7 +13,7 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        self.title = "kjkkk"
+        self.navigationItem.title = "kjkkk"
         let btn = UIButton.init(type: .custom)
         btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         btn.backgroundColor = UIColor.gray

@@ -25,10 +25,10 @@ class TabBarViewController: UITabBarController {
 
     private func  setupChildViewController() {
         //vc 设置title会覆盖此处的title
-        tabBaraAddChildViewController(vc: ViewController(), title: "一", image: "tab_one", selectedImage: "tab_one")
-        tabBaraAddChildViewController(vc: HomeViewController(), title: "二", image: "tab_one", selectedImage: "tab_one")
-        tabBaraAddChildViewController(vc: ViewController(), title: "三", image: "tab_one", selectedImage: "tab_one")
-        tabBaraAddChildViewController(vc: HomeViewController(), title: "四", image: "tab_one", selectedImage: "tab_one")
+        tabBaraAddChildViewController(vc: OneViewController(), title: "一", image: "tab_one", selectedImage: "tab_one")
+        tabBaraAddChildViewController(vc: TwoViewController(), title: "二", image: "tab_one", selectedImage: "tab_one")
+        tabBaraAddChildViewController(vc: HomeViewController(), title: "三", image: "tab_one", selectedImage: "tab_one")
+        tabBaraAddChildViewController(vc: ViewController(), title: "四", image: "tab_one", selectedImage: "tab_one")
     }
     func tabBaraAddChildViewController(vc: UIViewController, title: String, image: String, selectedImage: String) {
         
